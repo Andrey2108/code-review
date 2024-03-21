@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    build: ./flask_app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./flask_app:/app
+    links:
+      - mongodb
+  mongodb:
+    image: mongo:3.6
