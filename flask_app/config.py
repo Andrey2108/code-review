@@ -1,9 +1,3 @@
-from pymongo import MongoClient
-
-client = MongoClient("mongodb", 27017)
-db = client.matrix12
-collection = db.products
-
 host = "https://matrix12.ru"
 url = "https://matrix12.ru/goods/notebook/notebook/?products_per_page=48"
 headers = {
