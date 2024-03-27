@@ -8,9 +8,6 @@ def get_html(url, params=""):
     return r
 
 
-html = get_html(url)
-
-
 def get_content(html):
     soup = BeautifulSoup(html, "html.parser")
     items = soup.find_all("div", class_="catalog_item")
@@ -36,7 +33,3 @@ def get_content(html):
         collection.insert_many(card_documents)
 
     return card_documents
-
-
-if __name__ == "__main__":
-    get_content(html.text)
