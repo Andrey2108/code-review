@@ -10,7 +10,6 @@ def index():
     return render_template("index.html", data=data)
 
 
-get_content(html.text)
-
-if __name__ == "__main__":
+if __name__ == "__app__":
+    get_content(html.text)
     app.run(host="0.0.0.0", debug=True)
